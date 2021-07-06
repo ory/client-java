@@ -30,7 +30,7 @@ import java.util.UUID;
  * VerifiableAddress is an identity&#39;s verifiable address
  */
 @ApiModel(description = "VerifiableAddress is an identity's verifiable address")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:57:07.949032569Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T16:23:29.702573788Z[Etc/UTC]")
 public class VerifiableIdentityAddress {
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)

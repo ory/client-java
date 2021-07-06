@@ -30,7 +30,7 @@ import sh.ory.model.Session;
  * The Response for Registration Flows via API
  */
 @ApiModel(description = "The Response for Registration Flows via API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:57:07.949032569Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T16:23:29.702573788Z[Etc/UTC]")
 public class RegistrationViaApiResponse {
   public static final String SERIALIZED_NAME_IDENTITY = "identity";
   @SerializedName(SERIALIZED_NAME_IDENTITY)

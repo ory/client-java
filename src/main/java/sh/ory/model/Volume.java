@@ -32,7 +32,7 @@ import sh.ory.model.VolumeUsageData;
  * Volume volume
  */
 @ApiModel(description = "Volume volume")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:57:07.949032569Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T16:23:29.702573788Z[Etc/UTC]")
 public class Volume {
   public static final String SERIALIZED_NAME_CREATED_AT = "CreatedAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)

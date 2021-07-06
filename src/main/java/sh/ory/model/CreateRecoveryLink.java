@@ -28,7 +28,7 @@ import java.util.UUID;
 /**
  * CreateRecoveryLink
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:57:07.949032569Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T16:23:29.702573788Z[Etc/UTC]")
 public class CreateRecoveryLink {
   public static final String SERIALIZED_NAME_EXPIRES_IN = "expires_in";
   @SerializedName(SERIALIZED_NAME_EXPIRES_IN)
