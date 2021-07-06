@@ -28,7 +28,7 @@ import java.io.IOException;
  * VolumeUsageData Usage details about the volume. This information is used by the &#x60;GET /system/df&#x60; endpoint, and omitted in other endpoints.
  */
 @ApiModel(description = "VolumeUsageData Usage details about the volume. This information is used by the `GET /system/df` endpoint, and omitted in other endpoints.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T14:36:05.081999485Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:26:11.612274675Z[Etc/UTC]")
 public class VolumeUsageData {
   public static final String SERIALIZED_NAME_REF_COUNT = "RefCount";
   @SerializedName(SERIALIZED_NAME_REF_COUNT)

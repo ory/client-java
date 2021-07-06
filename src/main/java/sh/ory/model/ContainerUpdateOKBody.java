@@ -30,7 +30,7 @@ import java.util.List;
  * ContainerUpdateOKBody OK response to ContainerUpdate operation
  */
 @ApiModel(description = "ContainerUpdateOKBody OK response to ContainerUpdate operation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T14:36:05.081999485Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:26:11.612274675Z[Etc/UTC]")
 public class ContainerUpdateOKBody {
   public static final String SERIALIZED_NAME_WARNINGS = "Warnings";
   @SerializedName(SERIALIZED_NAME_WARNINGS)

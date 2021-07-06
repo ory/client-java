@@ -28,7 +28,7 @@ import java.io.IOException;
  * AuthenticateOKBody authenticate o k body
  */
 @ApiModel(description = "AuthenticateOKBody authenticate o k body")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T14:36:05.081999485Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:26:11.612274675Z[Etc/UTC]")
 public class AuthenticateOKBody {
   public static final String SERIALIZED_NAME_IDENTITY_TOKEN = "IdentityToken";
   @SerializedName(SERIALIZED_NAME_IDENTITY_TOKEN)

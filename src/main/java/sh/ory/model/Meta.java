@@ -29,7 +29,7 @@ import sh.ory.model.UiText;
  * This might include a label and other information that can optionally be used to render UIs.
  */
 @ApiModel(description = "This might include a label and other information that can optionally be used to render UIs.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T14:36:05.081999485Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:26:11.612274675Z[Etc/UTC]")
 public class Meta {
   public static final String SERIALIZED_NAME_LABEL = "label";
   @SerializedName(SERIALIZED_NAME_LABEL)
