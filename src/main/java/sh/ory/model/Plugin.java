@@ -30,7 +30,7 @@ import sh.ory.model.PluginSettings;
  * Plugin A plugin for the Engine API
  */
 @ApiModel(description = "Plugin A plugin for the Engine API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T14:20:59.215524089Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T14:36:05.081999485Z[Etc/UTC]")
 public class Plugin {
   public static final String SERIALIZED_NAME_CONFIG = "Config";
   @SerializedName(SERIALIZED_NAME_CONFIG)

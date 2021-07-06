@@ -28,7 +28,7 @@ import java.io.IOException;
  * ContainerChangeResponseItem change item in response to ContainerChanges operation
  */
 @ApiModel(description = "ContainerChangeResponseItem change item in response to ContainerChanges operation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T14:20:59.215524089Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T14:36:05.081999485Z[Etc/UTC]")
 public class ContainerChangeResponseItem {
   public static final String SERIALIZED_NAME_KIND = "Kind";
   @SerializedName(SERIALIZED_NAME_KIND)
