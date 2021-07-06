@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * RevokeSession
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:26:11.612274675Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:57:07.949032569Z[Etc/UTC]")
 public class RevokeSession {
   public static final String SERIALIZED_NAME_SESSION_TOKEN = "session_token";
   @SerializedName(SERIALIZED_NAME_SESSION_TOKEN)

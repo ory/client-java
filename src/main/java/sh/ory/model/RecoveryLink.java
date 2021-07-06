@@ -28,7 +28,7 @@ import java.time.OffsetDateTime;
 /**
  * RecoveryLink
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:26:11.612274675Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:57:07.949032569Z[Etc/UTC]")
 public class RecoveryLink {
   public static final String SERIALIZED_NAME_EXPIRES_AT = "expires_at";
   @SerializedName(SERIALIZED_NAME_EXPIRES_AT)

@@ -29,7 +29,7 @@ import sh.ory.model.Session;
  * The Response for Login Flows via API
  */
 @ApiModel(description = "The Response for Login Flows via API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:26:11.612274675Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:57:07.949032569Z[Etc/UTC]")
 public class LoginViaApiResponse {
   public static final String SERIALIZED_NAME_SESSION = "session";
   @SerializedName(SERIALIZED_NAME_SESSION)

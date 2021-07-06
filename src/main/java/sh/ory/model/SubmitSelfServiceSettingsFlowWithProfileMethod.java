@@ -28,7 +28,7 @@ import java.io.IOException;
  * nolint:deadcode,unused
  */
 @ApiModel(description = "nolint:deadcode,unused")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:26:11.612274675Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:57:07.949032569Z[Etc/UTC]")
 public class SubmitSelfServiceSettingsFlowWithProfileMethod {
   public static final String SERIALIZED_NAME_CSRF_TOKEN = "csrf_token";
   @SerializedName(SERIALIZED_NAME_CSRF_TOKEN)

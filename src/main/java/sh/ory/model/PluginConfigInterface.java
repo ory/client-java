@@ -31,7 +31,7 @@ import sh.ory.model.PluginInterfaceType;
  * PluginConfigInterface The interface between Docker and the plugin
  */
 @ApiModel(description = "PluginConfigInterface The interface between Docker and the plugin")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:26:11.612274675Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T15:57:07.949032569Z[Etc/UTC]")
 public class PluginConfigInterface {
   public static final String SERIALIZED_NAME_SOCKET = "Socket";
   @SerializedName(SERIALIZED_NAME_SOCKET)
