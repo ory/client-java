@@ -28,7 +28,7 @@ import java.io.IOException;
  * PluginInterfaceType plugin interface type
  */
 @ApiModel(description = "PluginInterfaceType plugin interface type")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T16:23:29.702573788Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-07T08:40:18.946504666Z[Etc/UTC]")
 public class PluginInterfaceType {
   public static final String SERIALIZED_NAME_CAPABILITY = "Capability";
   @SerializedName(SERIALIZED_NAME_CAPABILITY)

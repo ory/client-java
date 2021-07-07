@@ -28,7 +28,7 @@ import java.io.IOException;
  * PluginConfigNetwork plugin config network
  */
 @ApiModel(description = "PluginConfigNetwork plugin config network")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-06T16:23:29.702573788Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-07T08:40:18.946504666Z[Etc/UTC]")
 public class PluginConfigNetwork {
   public static final String SERIALIZED_NAME_TYPE = "Type";
   @SerializedName(SERIALIZED_NAME_TYPE)
