@@ -1,8 +1,8 @@
 # client
 
 Ory APIs
-- API version: v0.0.1-alpha.13
-  - Build date: 2021-07-07T09:47:48.213157439Z[Etc/UTC]
+- API version: v0.0.1-alpha.14
+  - Build date: 2021-07-07T10:27:17.267939776Z[Etc/UTC]
 
 Documentation for all public and administrative Ory APIs. Administrative APIs can only be accessed
 with a valid Personal Access Token. Public APIs are mostly used in browsers.
@@ -42,7 +42,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>sh.ory</groupId>
   <artifactId>client</artifactId>
-  <version>v0.0.1-alpha.13</version>
+  <version>v0.0.1-alpha.14</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -52,7 +52,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "sh.ory:client:v0.0.1-alpha.13"
+compile "sh.ory:client:v0.0.1-alpha.14"
 ```
 
 ### Others
@@ -65,7 +65,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/client-v0.0.1-alpha.13.jar`
+* `target/client-v0.0.1-alpha.14.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
