@@ -33,11 +33,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://playground.projects.oryapis.com");
     
-    // Configure API key authorization: oryAccessToken
-    ApiKeyAuth oryAccessToken = (ApiKeyAuth) defaultClient.getAuthentication("oryAccessToken");
-    oryAccessToken.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //oryAccessToken.setApiKeyPrefix("Token");
+    // Configure HTTP bearer authorization: oryAccessToken
+    HttpBearerAuth oryAccessToken = (HttpBearerAuth) defaultClient.getAuthentication("oryAccessToken");
+    oryAccessToken.setBearerToken("BEARER TOKEN");
 
     V0alpha0Api apiInstance = new V0alpha0Api(defaultClient);
     ProjectPatch projectPatch = new ProjectPatch(); // ProjectPatch | 
@@ -77,7 +75,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | project |  -  |
+**201** | project |  -  |
 **401** | genericError |  -  |
 **403** | genericError |  -  |
 **404** | genericError |  -  |
@@ -106,11 +104,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://playground.projects.oryapis.com");
     
-    // Configure API key authorization: oryAccessToken
-    ApiKeyAuth oryAccessToken = (ApiKeyAuth) defaultClient.getAuthentication("oryAccessToken");
-    oryAccessToken.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //oryAccessToken.setApiKeyPrefix("Token");
+    // Configure HTTP bearer authorization: oryAccessToken
+    HttpBearerAuth oryAccessToken = (HttpBearerAuth) defaultClient.getAuthentication("oryAccessToken");
+    oryAccessToken.setBearerToken("BEARER TOKEN");
 
     V0alpha0Api apiInstance = new V0alpha0Api(defaultClient);
     String projectId = "projectId_example"; // String | Project ID  The project's ID.
@@ -179,11 +175,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://playground.projects.oryapis.com");
     
-    // Configure API key authorization: oryAccessToken
-    ApiKeyAuth oryAccessToken = (ApiKeyAuth) defaultClient.getAuthentication("oryAccessToken");
-    oryAccessToken.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //oryAccessToken.setApiKeyPrefix("Token");
+    // Configure HTTP bearer authorization: oryAccessToken
+    HttpBearerAuth oryAccessToken = (HttpBearerAuth) defaultClient.getAuthentication("oryAccessToken");
+    oryAccessToken.setBearerToken("BEARER TOKEN");
 
     V0alpha0Api apiInstance = new V0alpha0Api(defaultClient);
     try {
@@ -248,11 +242,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://playground.projects.oryapis.com");
     
-    // Configure API key authorization: oryAccessToken
-    ApiKeyAuth oryAccessToken = (ApiKeyAuth) defaultClient.getAuthentication("oryAccessToken");
-    oryAccessToken.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //oryAccessToken.setApiKeyPrefix("Token");
+    // Configure HTTP bearer authorization: oryAccessToken
+    HttpBearerAuth oryAccessToken = (HttpBearerAuth) defaultClient.getAuthentication("oryAccessToken");
+    oryAccessToken.setBearerToken("BEARER TOKEN");
 
     V0alpha0Api apiInstance = new V0alpha0Api(defaultClient);
     String projectId = "projectId_example"; // String | Project ID  The project's ID.
