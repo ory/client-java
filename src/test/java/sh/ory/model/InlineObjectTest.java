@@ -27,41 +27,25 @@ import org.junit.Test;
 
 
 /**
- * Model tests for SubmitSelfServiceSettingsFlowWithProfileMethodBody
+ * Model tests for InlineObject
  */
-public class SubmitSelfServiceSettingsFlowWithProfileMethodBodyTest {
-    private final SubmitSelfServiceSettingsFlowWithProfileMethodBody model = new SubmitSelfServiceSettingsFlowWithProfileMethodBody();
+public class InlineObjectTest {
+    private final InlineObject model = new InlineObject();
 
     /**
-     * Model tests for SubmitSelfServiceSettingsFlowWithProfileMethodBody
+     * Model tests for InlineObject
      */
     @Test
-    public void testSubmitSelfServiceSettingsFlowWithProfileMethodBody() {
-        // TODO: test SubmitSelfServiceSettingsFlowWithProfileMethodBody
+    public void testInlineObject() {
+        // TODO: test InlineObject
     }
 
     /**
-     * Test the property 'csrfToken'
+     * Test the property 'projectId'
      */
     @Test
-    public void csrfTokenTest() {
-        // TODO: test csrfToken
-    }
-
-    /**
-     * Test the property 'method'
-     */
-    @Test
-    public void methodTest() {
-        // TODO: test method
-    }
-
-    /**
-     * Test the property 'traits'
-     */
-    @Test
-    public void traitsTest() {
-        // TODO: test traits
+    public void projectIdTest() {
+        // TODO: test projectId
     }
 
 }

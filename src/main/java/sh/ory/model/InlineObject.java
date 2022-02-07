@@ -25,37 +25,37 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * InvitePayload
+ * InlineObject
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-07T18:19:27.817298006Z[Etc/UTC]")
-public class InvitePayload {
-  public static final String SERIALIZED_NAME_INVITEE_EMAIL = "invitee_email";
-  @SerializedName(SERIALIZED_NAME_INVITEE_EMAIL)
-  private String inviteeEmail;
+public class InlineObject {
+  public static final String SERIALIZED_NAME_PROJECT_ID = "project_id";
+  @SerializedName(SERIALIZED_NAME_PROJECT_ID)
+  private String projectId;
 
-  public InvitePayload() { 
+  public InlineObject() { 
   }
 
-  public InvitePayload inviteeEmail(String inviteeEmail) {
+  public InlineObject projectId(String projectId) {
     
-    this.inviteeEmail = inviteeEmail;
+    this.projectId = projectId;
     return this;
   }
 
    /**
-   * Get inviteeEmail
-   * @return inviteeEmail
+   * Project ID  The Project ID you want to set active.  format: uuid
+   * @return projectId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Project ID  The Project ID you want to set active.  format: uuid")
 
-  public String getInviteeEmail() {
-    return inviteeEmail;
+  public String getProjectId() {
+    return projectId;
   }
 
 
-  public void setInviteeEmail(String inviteeEmail) {
-    this.inviteeEmail = inviteeEmail;
+  public void setProjectId(String projectId) {
+    this.projectId = projectId;
   }
 
 
@@ -67,20 +67,20 @@ public class InvitePayload {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InvitePayload invitePayload = (InvitePayload) o;
-    return Objects.equals(this.inviteeEmail, invitePayload.inviteeEmail);
+    InlineObject inlineObject = (InlineObject) o;
+    return Objects.equals(this.projectId, inlineObject.projectId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(inviteeEmail);
+    return Objects.hash(projectId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InvitePayload {\n");
-    sb.append("    inviteeEmail: ").append(toIndentedString(inviteeEmail)).append("\n");
+    sb.append("class InlineObject {\n");
+    sb.append("    projectId: ").append(toIndentedString(projectId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
