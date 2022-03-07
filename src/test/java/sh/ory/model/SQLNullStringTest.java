@@ -27,33 +27,33 @@ import org.junit.Test;
 
 
 /**
- * Model tests for Pagination
+ * Model tests for SQLNullString
  */
-public class PaginationTest {
-    private final Pagination model = new Pagination();
+public class SQLNullStringTest {
+    private final SQLNullString model = new SQLNullString();
 
     /**
-     * Model tests for Pagination
+     * Model tests for SQLNullString
      */
     @Test
-    public void testPagination() {
-        // TODO: test Pagination
+    public void testSQLNullString() {
+        // TODO: test SQLNullString
     }
 
     /**
-     * Test the property 'page'
+     * Test the property 'string'
      */
     @Test
-    public void pageTest() {
-        // TODO: test page
+    public void stringTest() {
+        // TODO: test string
     }
 
     /**
-     * Test the property 'perPage'
+     * Test the property 'valid'
      */
     @Test
-    public void perPageTest() {
-        // TODO: test perPage
+    public void validTest() {
+        // TODO: test valid
     }
 
 }

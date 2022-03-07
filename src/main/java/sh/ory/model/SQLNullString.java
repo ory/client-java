@@ -25,37 +25,64 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * InvitePayload
+ * SQLNullString
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-07T12:15:52.768168352Z[Etc/UTC]")
-public class InvitePayload {
-  public static final String SERIALIZED_NAME_INVITEE_EMAIL = "invitee_email";
-  @SerializedName(SERIALIZED_NAME_INVITEE_EMAIL)
-  private String inviteeEmail;
+public class SQLNullString {
+  public static final String SERIALIZED_NAME_STRING = "String";
+  @SerializedName(SERIALIZED_NAME_STRING)
+  private String string;
 
-  public InvitePayload() { 
+  public static final String SERIALIZED_NAME_VALID = "Valid";
+  @SerializedName(SERIALIZED_NAME_VALID)
+  private Boolean valid;
+
+  public SQLNullString() { 
   }
 
-  public InvitePayload inviteeEmail(String inviteeEmail) {
+  public SQLNullString string(String string) {
     
-    this.inviteeEmail = inviteeEmail;
+    this.string = string;
     return this;
   }
 
    /**
-   * Get inviteeEmail
-   * @return inviteeEmail
+   * Get string
+   * @return string
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getInviteeEmail() {
-    return inviteeEmail;
+  public String getString() {
+    return string;
   }
 
 
-  public void setInviteeEmail(String inviteeEmail) {
-    this.inviteeEmail = inviteeEmail;
+  public void setString(String string) {
+    this.string = string;
+  }
+
+
+  public SQLNullString valid(Boolean valid) {
+    
+    this.valid = valid;
+    return this;
+  }
+
+   /**
+   * Get valid
+   * @return valid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getValid() {
+    return valid;
+  }
+
+
+  public void setValid(Boolean valid) {
+    this.valid = valid;
   }
 
 
@@ -67,20 +94,22 @@ public class InvitePayload {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InvitePayload invitePayload = (InvitePayload) o;
-    return Objects.equals(this.inviteeEmail, invitePayload.inviteeEmail);
+    SQLNullString sqLNullString = (SQLNullString) o;
+    return Objects.equals(this.string, sqLNullString.string) &&
+        Objects.equals(this.valid, sqLNullString.valid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(inviteeEmail);
+    return Objects.hash(string, valid);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InvitePayload {\n");
-    sb.append("    inviteeEmail: ").append(toIndentedString(inviteeEmail)).append("\n");
+    sb.append("class SQLNullString {\n");
+    sb.append("    string: ").append(toIndentedString(string)).append("\n");
+    sb.append("    valid: ").append(toIndentedString(valid)).append("\n");
     sb.append("}");
     return sb.toString();
   }
