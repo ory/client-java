@@ -21,31 +21,40 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.UUID;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for InlineResponse2001
+ * Model tests for ProvisionMockSubscriptionPayload
  */
-public class InlineResponse2001Test {
-    private final InlineResponse2001 model = new InlineResponse2001();
+public class ProvisionMockSubscriptionPayloadTest {
+    private final ProvisionMockSubscriptionPayload model = new ProvisionMockSubscriptionPayload();
 
     /**
-     * Model tests for InlineResponse2001
+     * Model tests for ProvisionMockSubscriptionPayload
      */
     @Test
-    public void testInlineResponse2001() {
-        // TODO: test InlineResponse2001
+    public void testProvisionMockSubscriptionPayload() {
+        // TODO: test ProvisionMockSubscriptionPayload
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'identityId'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void identityIdTest() {
+        // TODO: test identityId
+    }
+
+    /**
+     * Test the property 'planOrPrice'
+     */
+    @Test
+    public void planOrPriceTest() {
+        // TODO: test planOrPrice
     }
 
 }

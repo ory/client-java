@@ -23,24 +23,48 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
- * UpdateSubscriptionPayload
+ * ProvisionMockSubscriptionPayload
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-18T14:07:53.269111298Z[Etc/UTC]")
-public class UpdateSubscriptionPayload {
+public class ProvisionMockSubscriptionPayload {
+  public static final String SERIALIZED_NAME_IDENTITY_ID = "identity_id";
+  @SerializedName(SERIALIZED_NAME_IDENTITY_ID)
+  private UUID identityId;
+
   public static final String SERIALIZED_NAME_PLAN_OR_PRICE = "plan_or_price";
   @SerializedName(SERIALIZED_NAME_PLAN_OR_PRICE)
   private String planOrPrice;
 
-  public static final String SERIALIZED_NAME_RETURN_TO = "return_to";
-  @SerializedName(SERIALIZED_NAME_RETURN_TO)
-  private String returnTo;
-
-  public UpdateSubscriptionPayload() { 
+  public ProvisionMockSubscriptionPayload() { 
   }
 
-  public UpdateSubscriptionPayload planOrPrice(String planOrPrice) {
+  public ProvisionMockSubscriptionPayload identityId(UUID identityId) {
+    
+    this.identityId = identityId;
+    return this;
+  }
+
+   /**
+   * Get identityId
+   * @return identityId
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public UUID getIdentityId() {
+    return identityId;
+  }
+
+
+  public void setIdentityId(UUID identityId) {
+    this.identityId = identityId;
+  }
+
+
+  public ProvisionMockSubscriptionPayload planOrPrice(String planOrPrice) {
     
     this.planOrPrice = planOrPrice;
     return this;
@@ -63,29 +87,6 @@ public class UpdateSubscriptionPayload {
   }
 
 
-  public UpdateSubscriptionPayload returnTo(String returnTo) {
-    
-    this.returnTo = returnTo;
-    return this;
-  }
-
-   /**
-   * Get returnTo
-   * @return returnTo
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getReturnTo() {
-    return returnTo;
-  }
-
-
-  public void setReturnTo(String returnTo) {
-    this.returnTo = returnTo;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -94,22 +95,22 @@ public class UpdateSubscriptionPayload {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UpdateSubscriptionPayload updateSubscriptionPayload = (UpdateSubscriptionPayload) o;
-    return Objects.equals(this.planOrPrice, updateSubscriptionPayload.planOrPrice) &&
-        Objects.equals(this.returnTo, updateSubscriptionPayload.returnTo);
+    ProvisionMockSubscriptionPayload provisionMockSubscriptionPayload = (ProvisionMockSubscriptionPayload) o;
+    return Objects.equals(this.identityId, provisionMockSubscriptionPayload.identityId) &&
+        Objects.equals(this.planOrPrice, provisionMockSubscriptionPayload.planOrPrice);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(planOrPrice, returnTo);
+    return Objects.hash(identityId, planOrPrice);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UpdateSubscriptionPayload {\n");
+    sb.append("class ProvisionMockSubscriptionPayload {\n");
+    sb.append("    identityId: ").append(toIndentedString(identityId)).append("\n");
     sb.append("    planOrPrice: ").append(toIndentedString(planOrPrice)).append("\n");
-    sb.append("    returnTo: ").append(toIndentedString(returnTo)).append("\n");
     sb.append("}");
     return sb.toString();
   }
