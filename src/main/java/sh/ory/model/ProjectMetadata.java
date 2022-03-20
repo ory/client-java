@@ -23,14 +23,24 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
-import sh.ory.model.ProjectServices;
 
 /**
- * Project
+ * ProjectMetadata
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-20T14:11:28.551680374Z[Etc/UTC]")
-public class Project {
+public class ProjectMetadata {
+  public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
+  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  private OffsetDateTime createdAt;
+
+  public static final String SERIALIZED_NAME_HOSTS = "hosts";
+  @SerializedName(SERIALIZED_NAME_HOSTS)
+  private List<String> hosts = new ArrayList<>();
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
@@ -38,14 +48,6 @@ public class Project {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
-
-  public static final String SERIALIZED_NAME_REVISION_ID = "revision_id";
-  @SerializedName(SERIALIZED_NAME_REVISION_ID)
-  private UUID revisionId;
-
-  public static final String SERIALIZED_NAME_SERVICES = "services";
-  @SerializedName(SERIALIZED_NAME_SERVICES)
-  private ProjectServices services;
 
   public static final String SERIALIZED_NAME_SLUG = "slug";
   @SerializedName(SERIALIZED_NAME_SLUG)
@@ -102,20 +104,77 @@ public class Project {
   @SerializedName(SERIALIZED_NAME_STATE)
   private StateEnum state;
 
-  public Project() { 
+  public static final String SERIALIZED_NAME_SUBSCRIPTION_ID = "subscription_id";
+  @SerializedName(SERIALIZED_NAME_SUBSCRIPTION_ID)
+  private String subscriptionId;
+
+  public static final String SERIALIZED_NAME_UPDATED_AT = "updated_at";
+  @SerializedName(SERIALIZED_NAME_UPDATED_AT)
+  private OffsetDateTime updatedAt;
+
+  public ProjectMetadata() { 
   }
 
   
-  public Project(
-     String slug, 
-     StateEnum state
+  public ProjectMetadata(
+     String slug
   ) {
     this();
     this.slug = slug;
-    this.state = state;
   }
 
-  public Project id(UUID id) {
+  public ProjectMetadata createdAt(OffsetDateTime createdAt) {
+    
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * The Project&#39;s Creation Date
+   * @return createdAt
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The Project's Creation Date")
+
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+  }
+
+
+  public ProjectMetadata hosts(List<String> hosts) {
+    
+    this.hosts = hosts;
+    return this;
+  }
+
+  public ProjectMetadata addHostsItem(String hostsItem) {
+    this.hosts.add(hostsItem);
+    return this;
+  }
+
+   /**
+   * Get hosts
+   * @return hosts
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<String> getHosts() {
+    return hosts;
+  }
+
+
+  public void setHosts(List<String> hosts) {
+    this.hosts = hosts;
+  }
+
+
+  public ProjectMetadata id(UUID id) {
     
     this.id = id;
     return this;
@@ -138,18 +197,18 @@ public class Project {
   }
 
 
-  public Project name(String name) {
+  public ProjectMetadata name(String name) {
     
     this.name = name;
     return this;
   }
 
    /**
-   * The name of the project.
+   * The project&#39;s name if set
    * @return name
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The name of the project.")
+  @ApiModelProperty(required = true, value = "The project's name if set")
 
   public String getName() {
     return name;
@@ -161,58 +220,12 @@ public class Project {
   }
 
 
-  public Project revisionId(UUID revisionId) {
-    
-    this.revisionId = revisionId;
-    return this;
-  }
-
-   /**
-   * Get revisionId
-   * @return revisionId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public UUID getRevisionId() {
-    return revisionId;
-  }
-
-
-  public void setRevisionId(UUID revisionId) {
-    this.revisionId = revisionId;
-  }
-
-
-  public Project services(ProjectServices services) {
-    
-    this.services = services;
-    return this;
-  }
-
-   /**
-   * Get services
-   * @return services
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public ProjectServices getServices() {
-    return services;
-  }
-
-
-  public void setServices(ProjectServices services) {
-    this.services = services;
-  }
-
-
    /**
    * The project&#39;s slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The project's slug")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The project's slug")
 
   public String getSlug() {
     return slug;
@@ -220,6 +233,12 @@ public class Project {
 
 
 
+
+  public ProjectMetadata state(StateEnum state) {
+    
+    this.state = state;
+    return this;
+  }
 
    /**
    * The state of the project.
@@ -233,6 +252,55 @@ public class Project {
   }
 
 
+  public void setState(StateEnum state) {
+    this.state = state;
+  }
+
+
+  public ProjectMetadata subscriptionId(String subscriptionId) {
+    
+    this.subscriptionId = subscriptionId;
+    return this;
+  }
+
+   /**
+   * Get subscriptionId
+   * @return subscriptionId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getSubscriptionId() {
+    return subscriptionId;
+  }
+
+
+  public void setSubscriptionId(String subscriptionId) {
+    this.subscriptionId = subscriptionId;
+  }
+
+
+  public ProjectMetadata updatedAt(OffsetDateTime updatedAt) {
+    
+    this.updatedAt = updatedAt;
+    return this;
+  }
+
+   /**
+   * Last Time Project was Updated
+   * @return updatedAt
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Last Time Project was Updated")
+
+  public OffsetDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
 
 
   @Override
@@ -243,30 +311,34 @@ public class Project {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Project project = (Project) o;
-    return Objects.equals(this.id, project.id) &&
-        Objects.equals(this.name, project.name) &&
-        Objects.equals(this.revisionId, project.revisionId) &&
-        Objects.equals(this.services, project.services) &&
-        Objects.equals(this.slug, project.slug) &&
-        Objects.equals(this.state, project.state);
+    ProjectMetadata projectMetadata = (ProjectMetadata) o;
+    return Objects.equals(this.createdAt, projectMetadata.createdAt) &&
+        Objects.equals(this.hosts, projectMetadata.hosts) &&
+        Objects.equals(this.id, projectMetadata.id) &&
+        Objects.equals(this.name, projectMetadata.name) &&
+        Objects.equals(this.slug, projectMetadata.slug) &&
+        Objects.equals(this.state, projectMetadata.state) &&
+        Objects.equals(this.subscriptionId, projectMetadata.subscriptionId) &&
+        Objects.equals(this.updatedAt, projectMetadata.updatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, revisionId, services, slug, state);
+    return Objects.hash(createdAt, hosts, id, name, slug, state, subscriptionId, updatedAt);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Project {\n");
+    sb.append("class ProjectMetadata {\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    hosts: ").append(toIndentedString(hosts)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    revisionId: ").append(toIndentedString(revisionId)).append("\n");
-    sb.append("    services: ").append(toIndentedString(services)).append("\n");
     sb.append("    slug: ").append(toIndentedString(slug)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
+    sb.append("    subscriptionId: ").append(toIndentedString(subscriptionId)).append("\n");
+    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("}");
     return sb.toString();
   }

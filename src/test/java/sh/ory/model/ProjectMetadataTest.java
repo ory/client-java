@@ -21,6 +21,9 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -28,17 +31,33 @@ import org.junit.Test;
 
 
 /**
- * Model tests for ApiToken
+ * Model tests for ProjectMetadata
  */
-public class ApiTokenTest {
-    private final ApiToken model = new ApiToken();
+public class ProjectMetadataTest {
+    private final ProjectMetadata model = new ProjectMetadata();
 
     /**
-     * Model tests for ApiToken
+     * Model tests for ProjectMetadata
      */
     @Test
-    public void testApiToken() {
-        // TODO: test ApiToken
+    public void testProjectMetadata() {
+        // TODO: test ProjectMetadata
+    }
+
+    /**
+     * Test the property 'createdAt'
+     */
+    @Test
+    public void createdAtTest() {
+        // TODO: test createdAt
+    }
+
+    /**
+     * Test the property 'hosts'
+     */
+    @Test
+    public void hostsTest() {
+        // TODO: test hosts
     }
 
     /**
@@ -58,27 +77,35 @@ public class ApiTokenTest {
     }
 
     /**
-     * Test the property 'ownerId'
+     * Test the property 'slug'
      */
     @Test
-    public void ownerIdTest() {
-        // TODO: test ownerId
+    public void slugTest() {
+        // TODO: test slug
     }
 
     /**
-     * Test the property 'projectId'
+     * Test the property 'state'
      */
     @Test
-    public void projectIdTest() {
-        // TODO: test projectId
+    public void stateTest() {
+        // TODO: test state
     }
 
     /**
-     * Test the property 'value'
+     * Test the property 'subscriptionId'
      */
     @Test
-    public void valueTest() {
-        // TODO: test value
+    public void subscriptionIdTest() {
+        // TODO: test subscriptionId
+    }
+
+    /**
+     * Test the property 'updatedAt'
+     */
+    @Test
+    public void updatedAtTest() {
+        // TODO: test updatedAt
     }
 
 }
