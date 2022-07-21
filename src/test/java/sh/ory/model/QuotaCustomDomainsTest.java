@@ -27,25 +27,41 @@ import org.junit.Test;
 
 
 /**
- * Model tests for InlineResponse200
+ * Model tests for QuotaCustomDomains
  */
-public class InlineResponse200Test {
-    private final InlineResponse200 model = new InlineResponse200();
+public class QuotaCustomDomainsTest {
+    private final QuotaCustomDomains model = new QuotaCustomDomains();
 
     /**
-     * Model tests for InlineResponse200
+     * Model tests for QuotaCustomDomains
      */
     @Test
-    public void testInlineResponse200() {
-        // TODO: test InlineResponse200
+    public void testQuotaCustomDomains() {
+        // TODO: test QuotaCustomDomains
     }
 
     /**
-     * Test the property 'status'
+     * Test the property 'availableDomains'
      */
     @Test
-    public void statusTest() {
-        // TODO: test status
+    public void availableDomainsTest() {
+        // TODO: test availableDomains
+    }
+
+    /**
+     * Test the property 'canUse'
+     */
+    @Test
+    public void canUseTest() {
+        // TODO: test canUse
+    }
+
+    /**
+     * Test the property 'usedDomains'
+     */
+    @Test
+    public void usedDomainsTest() {
+        // TODO: test usedDomains
     }
 
 }
