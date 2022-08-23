@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **clientId** | **String** |  |  [optional]
 **consentChallenge** | **String** |  |  [optional]
 **excludeNotBeforeClaim** | **Boolean** |  |  [optional]
+**expiresAt** | [**OAuth2ConsentSessionExpiresAt**](OAuth2ConsentSessionExpiresAt.md) |  |  [optional]
 **extra** | **Map&lt;String, Object&gt;** |  |  [optional]
 **headers** | [**Headers**](Headers.md) |  |  [optional]
 **idTokenClaims** | [**IDTokenClaims**](IDTokenClaims.md) |  |  [optional]

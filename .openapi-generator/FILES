@@ -80,6 +80,7 @@ docs/OAuth2Client.md
 docs/OAuth2ConsentRequest.md
 docs/OAuth2ConsentRequestOpenIDConnectContext.md
 docs/OAuth2ConsentSession.md
+docs/OAuth2ConsentSessionExpiresAt.md
 docs/OAuth2LoginRequest.md
 docs/OAuth2LogoutRequest.md
 docs/OAuth2TokenResponse.md
@@ -286,6 +287,7 @@ src/main/java/sh/ory/model/OAuth2Client.java
 src/main/java/sh/ory/model/OAuth2ConsentRequest.java
 src/main/java/sh/ory/model/OAuth2ConsentRequestOpenIDConnectContext.java
 src/main/java/sh/ory/model/OAuth2ConsentSession.java
+src/main/java/sh/ory/model/OAuth2ConsentSessionExpiresAt.java
 src/main/java/sh/ory/model/OAuth2LoginRequest.java
 src/main/java/sh/ory/model/OAuth2LogoutRequest.java
 src/main/java/sh/ory/model/OAuth2TokenResponse.java
@@ -458,6 +460,7 @@ src/test/java/sh/ory/model/OAuth2ApiErrorTest.java
 src/test/java/sh/ory/model/OAuth2ClientTest.java
 src/test/java/sh/ory/model/OAuth2ConsentRequestOpenIDConnectContextTest.java
 src/test/java/sh/ory/model/OAuth2ConsentRequestTest.java
+src/test/java/sh/ory/model/OAuth2ConsentSessionExpiresAtTest.java
 src/test/java/sh/ory/model/OAuth2ConsentSessionTest.java
 src/test/java/sh/ory/model/OAuth2LoginRequestTest.java
 src/test/java/sh/ory/model/OAuth2LogoutRequestTest.java
