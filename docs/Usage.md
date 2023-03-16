@@ -1,13 +1,13 @@
 
 
-# QuotaBrandingThemes
+# Usage
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**canAdd** | **Boolean** |  |  [optional] |
+|**genericUsage** | [**GenericUsage**](GenericUsage.md) |  |  [optional] |
 
 
 
