@@ -5,14 +5,14 @@
     <packaging>jar</packaging>
     <name>ory-client</name>
 
-    <version>1.1.44</version>
+    <version>1.1.44-SNAPSHOT</version>
     <url>https://github.com/ory/client-java</url>
     <description>Java Client for Ory</description>
     <scm>
         <connection>scm:git:git@github.com:ory/client-java.git</connection>
         <developerConnection>scm:git:git@github.com:ory/client-java.git</developerConnection>
         <url>https://github.com/ory/client-java</url>
-      <tag>v1.1.44</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <licenses>
