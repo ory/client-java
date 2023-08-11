@@ -1,6 +1,6 @@
 
 
-# ProjectInvite
+# MemberInvite
 
 
 ## Properties
