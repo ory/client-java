@@ -1,6 +1,6 @@
 
 
-# CORS
+# ProjectCors
 
 
 ## Properties
