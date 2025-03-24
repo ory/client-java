@@ -257,6 +257,7 @@ docs/UpdateLoginFlowWithLookupSecretMethod.md
 docs/UpdateLoginFlowWithOidcMethod.md
 docs/UpdateLoginFlowWithPasskeyMethod.md
 docs/UpdateLoginFlowWithPasswordMethod.md
+docs/UpdateLoginFlowWithSamlMethod.md
 docs/UpdateLoginFlowWithTotpMethod.md
 docs/UpdateLoginFlowWithWebAuthnMethod.md
 docs/UpdateRecoveryFlowBody.md
@@ -268,6 +269,7 @@ docs/UpdateRegistrationFlowWithOidcMethod.md
 docs/UpdateRegistrationFlowWithPasskeyMethod.md
 docs/UpdateRegistrationFlowWithPasswordMethod.md
 docs/UpdateRegistrationFlowWithProfileMethod.md
+docs/UpdateRegistrationFlowWithSamlMethod.md
 docs/UpdateRegistrationFlowWithWebAuthnMethod.md
 docs/UpdateSettingsFlowBody.md
 docs/UpdateSettingsFlowWithLookupMethod.md
@@ -275,6 +277,7 @@ docs/UpdateSettingsFlowWithOidcMethod.md
 docs/UpdateSettingsFlowWithPasskeyMethod.md
 docs/UpdateSettingsFlowWithPasswordMethod.md
 docs/UpdateSettingsFlowWithProfileMethod.md
+docs/UpdateSettingsFlowWithSamlMethod.md
 docs/UpdateSettingsFlowWithTotpMethod.md
 docs/UpdateSettingsFlowWithWebAuthnMethod.md
 docs/UpdateSubscriptionBody.md
@@ -579,6 +582,7 @@ src/main/java/sh/ory/model/UpdateLoginFlowWithLookupSecretMethod.java
 src/main/java/sh/ory/model/UpdateLoginFlowWithOidcMethod.java
 src/main/java/sh/ory/model/UpdateLoginFlowWithPasskeyMethod.java
 src/main/java/sh/ory/model/UpdateLoginFlowWithPasswordMethod.java
+src/main/java/sh/ory/model/UpdateLoginFlowWithSamlMethod.java
 src/main/java/sh/ory/model/UpdateLoginFlowWithTotpMethod.java
 src/main/java/sh/ory/model/UpdateLoginFlowWithWebAuthnMethod.java
 src/main/java/sh/ory/model/UpdateRecoveryFlowBody.java
@@ -590,6 +594,7 @@ src/main/java/sh/ory/model/UpdateRegistrationFlowWithOidcMethod.java
 src/main/java/sh/ory/model/UpdateRegistrationFlowWithPasskeyMethod.java
 src/main/java/sh/ory/model/UpdateRegistrationFlowWithPasswordMethod.java
 src/main/java/sh/ory/model/UpdateRegistrationFlowWithProfileMethod.java
+src/main/java/sh/ory/model/UpdateRegistrationFlowWithSamlMethod.java
 src/main/java/sh/ory/model/UpdateRegistrationFlowWithWebAuthnMethod.java
 src/main/java/sh/ory/model/UpdateSettingsFlowBody.java
 src/main/java/sh/ory/model/UpdateSettingsFlowWithLookupMethod.java
@@ -597,6 +602,7 @@ src/main/java/sh/ory/model/UpdateSettingsFlowWithOidcMethod.java
 src/main/java/sh/ory/model/UpdateSettingsFlowWithPasskeyMethod.java
 src/main/java/sh/ory/model/UpdateSettingsFlowWithPasswordMethod.java
 src/main/java/sh/ory/model/UpdateSettingsFlowWithProfileMethod.java
+src/main/java/sh/ory/model/UpdateSettingsFlowWithSamlMethod.java
 src/main/java/sh/ory/model/UpdateSettingsFlowWithTotpMethod.java
 src/main/java/sh/ory/model/UpdateSettingsFlowWithWebAuthnMethod.java
 src/main/java/sh/ory/model/UpdateSubscriptionBody.java
@@ -868,6 +874,7 @@ src/test/java/sh/ory/model/UpdateLoginFlowWithLookupSecretMethodTest.java
 src/test/java/sh/ory/model/UpdateLoginFlowWithOidcMethodTest.java
 src/test/java/sh/ory/model/UpdateLoginFlowWithPasskeyMethodTest.java
 src/test/java/sh/ory/model/UpdateLoginFlowWithPasswordMethodTest.java
+src/test/java/sh/ory/model/UpdateLoginFlowWithSamlMethodTest.java
 src/test/java/sh/ory/model/UpdateLoginFlowWithTotpMethodTest.java
 src/test/java/sh/ory/model/UpdateLoginFlowWithWebAuthnMethodTest.java
 src/test/java/sh/ory/model/UpdateRecoveryFlowBodyTest.java
@@ -879,6 +886,7 @@ src/test/java/sh/ory/model/UpdateRegistrationFlowWithOidcMethodTest.java
 src/test/java/sh/ory/model/UpdateRegistrationFlowWithPasskeyMethodTest.java
 src/test/java/sh/ory/model/UpdateRegistrationFlowWithPasswordMethodTest.java
 src/test/java/sh/ory/model/UpdateRegistrationFlowWithProfileMethodTest.java
+src/test/java/sh/ory/model/UpdateRegistrationFlowWithSamlMethodTest.java
 src/test/java/sh/ory/model/UpdateRegistrationFlowWithWebAuthnMethodTest.java
 src/test/java/sh/ory/model/UpdateSettingsFlowBodyTest.java
 src/test/java/sh/ory/model/UpdateSettingsFlowWithLookupMethodTest.java
@@ -886,6 +894,7 @@ src/test/java/sh/ory/model/UpdateSettingsFlowWithOidcMethodTest.java
 src/test/java/sh/ory/model/UpdateSettingsFlowWithPasskeyMethodTest.java
 src/test/java/sh/ory/model/UpdateSettingsFlowWithPasswordMethodTest.java
 src/test/java/sh/ory/model/UpdateSettingsFlowWithProfileMethodTest.java
+src/test/java/sh/ory/model/UpdateSettingsFlowWithSamlMethodTest.java
 src/test/java/sh/ory/model/UpdateSettingsFlowWithTotpMethodTest.java
 src/test/java/sh/ory/model/UpdateSettingsFlowWithWebAuthnMethodTest.java
 src/test/java/sh/ory/model/UpdateSubscriptionBodyTest.java
