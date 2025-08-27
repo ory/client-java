@@ -8,6 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**createdAt** | **OffsetDateTime** | The onboarding portal link&#39;s creation date |  [optional] [readonly] |
+|**enableScim** | **Boolean** | Feature flag to enable SCIM configuration |  [optional] |
 |**enableSso** | **Boolean** | Feature flag to enable SSO configuration |  [optional] |
 |**expiresAt** | **OffsetDateTime** | The onboarding portal link&#39;s expiry date |  [readonly] |
 |**id** | **String** | The onboarding portal link&#39;s ID. |  [readonly] |
