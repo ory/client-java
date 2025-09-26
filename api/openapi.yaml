@@ -39,7 +39,7 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: /tos
   title: Ory APIs
-  version: v1.22.2
+  version: v1.22.3
 servers:
 - url: "https://{project_slug}.projects.oryapis.com/"
   variables:
@@ -12392,6 +12392,10 @@ components:
       $ref: '#/components/schemas/CreateInviteResponse'
     createOrganizationOnboardingPortalLinkBody:
       properties:
+        custom_hostname_id:
+          format: uuid4
+          nullable: true
+          type: string
         enable_scim:
           description: Feature flag to enable SCIM configuration
           type: boolean
@@ -16909,6 +16913,9 @@ components:
       type: array
     normalizedProjectRevisionSAMLProvider:
       properties:
+        audience_override_base_url:
+          nullable: true
+          type: string
         created_at:
           description: The Project's Revision Creation Date
           format: date-time
@@ -19078,6 +19085,7 @@ components:
       type: object
     onboardingPortalLink:
       example:
+        custom_hostname_id: custom_hostname_id
         expires_at: 2000-01-23T04:56:07.000+00:00
         enable_scim: true
         project_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
@@ -19091,6 +19099,10 @@ components:
           description: The onboarding portal link's creation date
           format: date-time
           readOnly: true
+          type: string
+        custom_hostname_id:
+          format: uuid4
+          nullable: true
           type: string
         enable_scim:
           description: Feature flag to enable SCIM configuration
@@ -19203,7 +19215,8 @@ components:
     organizationOnboardingPortalLinksResponse:
       example:
         links:
-        - expires_at: 2000-01-23T04:56:07.000+00:00
+        - custom_hostname_id: custom_hostname_id
+          expires_at: 2000-01-23T04:56:07.000+00:00
           enable_scim: true
           project_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           organization_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
@@ -19211,7 +19224,8 @@ components:
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           value: value
           enable_sso: true
-        - expires_at: 2000-01-23T04:56:07.000+00:00
+        - custom_hostname_id: custom_hostname_id
+          expires_at: 2000-01-23T04:56:07.000+00:00
           enable_scim: true
           project_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           organization_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
