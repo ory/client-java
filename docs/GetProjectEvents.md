@@ -1,6 +1,6 @@
 
 
-# GetProjectEventsResponse
+# GetProjectEvents
 
 Response of the getProjectEvents endpoint
 

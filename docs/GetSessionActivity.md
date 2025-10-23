@@ -1,6 +1,6 @@
 
 
-# GetSessionActivityResponse
+# GetSessionActivity
 
 Response of the getSessionActivity endpoint
 

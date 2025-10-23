@@ -1,6 +1,6 @@
 
 
-# GetProjectMetricsResponse
+# GetProjectMetrics
 
 Response of the getMetrics endpoint
 

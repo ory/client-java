@@ -1,6 +1,6 @@
 
 
-# GetAttributesCountResponse
+# GetAttributesCount
 
 Response of the getAttributesCount endpoint
 

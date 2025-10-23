@@ -1,6 +1,6 @@
 
 
-# InternalIsOwnerForProjectBySlugResponse
+# InternalIsOwnerForProjectBySlug
 
 
 ## Properties

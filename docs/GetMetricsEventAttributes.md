@@ -1,6 +1,6 @@
 
 
-# GetMetricsEventAttributesResponse
+# GetMetricsEventAttributes
 
 Response of the getMetricsEventAttributes endpoint
 

@@ -1,6 +1,6 @@
 
 
-# GetMetricsEventTypesResponse
+# GetMetricsEventTypes
 
 Response of the getMetricsEventTypes endpoint
 
