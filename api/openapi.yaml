@@ -39,7 +39,7 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: /tos
   title: Ory APIs
-  version: v1.22.36
+  version: v1.22.37
 servers:
 - url: "https://{project_slug}.projects.oryapis.com/"
   variables:
@@ -947,6 +947,7 @@ paths:
             - passkey
             - profile
             - saml
+            - deviceauthn
             - link_recovery
             - code_recovery
             type: string
@@ -1054,6 +1055,7 @@ paths:
             - passkey
             - profile
             - saml
+            - deviceauthn
             - link_recovery
             - code_recovery
             type: string
@@ -1244,6 +1246,7 @@ paths:
           passkey CredentialsTypePasskey
           profile CredentialsTypeProfile
           saml CredentialsTypeSAML
+          deviceauthn CredentialsTypeDeviceAuthn
           link_recovery CredentialsTypeRecoveryLink  CredentialsTypeRecoveryLink is a special credential type linked to the link strategy (recovery flow).  It is not used within the credentials object itself.
           code_recovery CredentialsTypeRecoveryCode
         explode: false
@@ -1261,6 +1264,7 @@ paths:
           - passkey
           - profile
           - saml
+          - deviceauthn
           - link_recovery
           - code_recovery
           type: string
@@ -1275,6 +1279,7 @@ paths:
           passkey CredentialsTypePasskey
           profile CredentialsTypeProfile
           saml CredentialsTypeSAML
+          deviceauthn CredentialsTypeDeviceAuthn
           link_recovery CredentialsTypeRecoveryLink  CredentialsTypeRecoveryLink is a special credential type linked to the link strategy (recovery flow).  It is not used within the credentials object itself.
           code_recovery CredentialsTypeRecoveryCode
       - description: |-
@@ -3730,6 +3735,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/project'
           description: project
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/errorGeneric'
+          description: errorGeneric
         "401":
           content:
             application/json:
@@ -11370,6 +11381,48 @@ components:
         A shallow copy would inadvertently share these underlying fields,
         leading to incorrect behavior and data races in a concurrent context.
         Consequently, all methods take the type by pointer and not by value.
+    DeviceAuthnKey:
+      properties:
+        client_key_id:
+          description: ClientKeyID is a client-chosen id for the key and is unique
+            per identity.
+          type: string
+        created_at:
+          description: |-
+            CreatedAt is the timestamp of when the key was created.
+            Only used for troubleshooting/UI.
+          format: date-time
+          type: string
+        device_name:
+          description: "DeviceName is a human readable name for the device, helping\
+            \ the user to distinguish it from others."
+          type: string
+        device_type:
+          type: string
+        public_key:
+          description: |-
+            PublicKey is an EC (in v1) public key, used to verify signatures, stored as uncompressed bytes.
+            The private key resides inside the device and does not exist on the server.
+          items:
+            format: uint8
+            type: integer
+          type: array
+        state:
+          type: string
+        version:
+          description: |-
+            v1 uses SHA256 + EC256.
+            v2 (in the future) may use ML-DSA which is post-quantum resistant.
+            This requires Android/iOS support so we have to wait.
+            We intentionally avoid storing the cryptographic algorithm here a la JWT/TLS
+            to avoid security issues and algorithm negotiation.
+          format: int64
+          type: integer
+      title: Key represents an enrolled hardware security key used for device authentication
+        (DeviceAuthn).
+      type: object
+    DeviceType:
+      type: string
     DeviceUserAuthRequest:
       properties:
         challenge:
@@ -11518,6 +11571,8 @@ components:
       items:
         $ref: '#/components/schemas/KetoNamespace'
       type: array
+    KeyState:
+      type: string
     LineItemV1:
       properties:
         amount_in_cent:
@@ -13259,6 +13314,31 @@ components:
         verification_status:
           type: string
       type: object
+    customerPortalAvailability:
+      description: |-
+        CustomerPortalAvailability describes whether the Stripe customer portal is
+        available for the logged-in user (or a workspace they access).
+      properties:
+        available:
+          description: Whether the customer portal is available.
+          type: boolean
+        reason:
+          description: |-
+            Optional reason why the portal is unavailable. Populated only when
+            `available` is false. For debugging and support purposes — frontend
+            consumers should not parse or depend on specific values.
+            no_stripe_customer CustomerPortalReasonNoStripeCustomer
+            no_subscription CustomerPortalReasonNoSubscription
+          enum:
+          - no_stripe_customer
+          - no_subscription
+          type: string
+          x-go-enum-desc: |-
+            no_stripe_customer CustomerPortalReasonNoStripeCustomer
+            no_subscription CustomerPortalReasonNoSubscription
+      required:
+      - available
+      type: object
     deleteMySessionsCount:
       description: Deleted Session Count
       example:
@@ -14013,6 +14093,7 @@ components:
             passkey CredentialsTypePasskey
             profile CredentialsTypeProfile
             saml CredentialsTypeSAML
+            deviceauthn CredentialsTypeDeviceAuthn
             link_recovery CredentialsTypeRecoveryLink  CredentialsTypeRecoveryLink is a special credential type linked to the link strategy (recovery flow).  It is not used within the credentials object itself.
             code_recovery CredentialsTypeRecoveryCode
           enum:
@@ -14025,6 +14106,7 @@ components:
           - passkey
           - profile
           - saml
+          - deviceauthn
           - link_recovery
           - code_recovery
           type: string
@@ -14038,6 +14120,7 @@ components:
             passkey CredentialsTypePasskey
             profile CredentialsTypeProfile
             saml CredentialsTypeSAML
+            deviceauthn CredentialsTypeDeviceAuthn
             link_recovery CredentialsTypeRecoveryLink  CredentialsTypeRecoveryLink is a special credential type linked to the link strategy (recovery flow).  It is not used within the credentials object itself.
             code_recovery CredentialsTypeRecoveryCode
         updated_at:
@@ -15398,6 +15481,7 @@ components:
             passkey CredentialsTypePasskey
             profile CredentialsTypeProfile
             saml CredentialsTypeSAML
+            deviceauthn CredentialsTypeDeviceAuthn
             link_recovery CredentialsTypeRecoveryLink  CredentialsTypeRecoveryLink is a special credential type linked to the link strategy (recovery flow).  It is not used within the credentials object itself.
             code_recovery CredentialsTypeRecoveryCode
           enum:
@@ -15410,6 +15494,7 @@ components:
           - passkey
           - profile
           - saml
+          - deviceauthn
           - link_recovery
           - code_recovery
           type: string
@@ -15423,6 +15508,7 @@ components:
             passkey CredentialsTypePasskey
             profile CredentialsTypeProfile
             saml CredentialsTypeSAML
+            deviceauthn CredentialsTypeDeviceAuthn
             link_recovery CredentialsTypeRecoveryLink  CredentialsTypeRecoveryLink is a special credential type linked to the link strategy (recovery flow).  It is not used within the credentials object itself.
             code_recovery CredentialsTypeRecoveryCode
         created_at:
@@ -17905,6 +17991,23 @@ components:
       type: object
     normalizedProjectRevisionThirdPartyProvider:
       properties:
+        aal2_acr_values:
+          description: |-
+            AAL2ACRValues lists upstream OIDC `acr` claim values that should
+            elevate the resulting Kratos session to AAL2. Empty means the
+            upstream `acr` claim is ignored when deciding session AAL.
+          items:
+            type: string
+          type: array
+        aal2_amr_values:
+          description: |-
+            AAL2AMRValues lists upstream OIDC `amr` claim values that should
+            elevate the resulting Kratos session to AAL2 when any of them
+            appears in the upstream `amr` array. Empty means the upstream
+            `amr` claim is ignored when deciding session AAL.
+          items:
+            type: string
+          type: array
         account_linking_mode:
           description: |-
             AccountLinkingMode controls how account conflicts are resolved for this provider.
@@ -22018,6 +22121,7 @@ components:
             passkey CredentialsTypePasskey
             profile CredentialsTypeProfile
             saml CredentialsTypeSAML
+            deviceauthn CredentialsTypeDeviceAuthn
             link_recovery CredentialsTypeRecoveryLink  CredentialsTypeRecoveryLink is a special credential type linked to the link strategy (recovery flow).  It is not used within the credentials object itself.
             code_recovery CredentialsTypeRecoveryCode
           enum:
@@ -22030,6 +22134,7 @@ components:
           - passkey
           - profile
           - saml
+          - deviceauthn
           - link_recovery
           - code_recovery
           type: string
@@ -22043,6 +22148,7 @@ components:
             passkey CredentialsTypePasskey
             profile CredentialsTypeProfile
             saml CredentialsTypeSAML
+            deviceauthn CredentialsTypeDeviceAuthn
             link_recovery CredentialsTypeRecoveryLink  CredentialsTypeRecoveryLink is a special credential type linked to the link strategy (recovery flow).  It is not used within the credentials object itself.
             code_recovery CredentialsTypeRecoveryCode
         expires_at:
@@ -22329,15 +22435,23 @@ components:
           user_agent: user_agent
         authentication_methods:
         - completed_at: 2000-01-23T04:56:07.000+00:00
+          upstream_acr: upstream_acr
           method: password
           provider: provider
           organization: organization
           aal: aal0
+          upstream_amr:
+          - upstream_amr
+          - upstream_amr
         - completed_at: 2000-01-23T04:56:07.000+00:00
+          upstream_acr: upstream_acr
           method: password
           provider: provider
           organization: organization
           aal: aal0
+          upstream_amr:
+          - upstream_amr
+          - upstream_amr
         authenticator_assurance_level: null
         identity:
           traits: ""
@@ -22456,10 +22570,14 @@ components:
       description: A singular authenticator used during authentication / login.
       example:
         completed_at: 2000-01-23T04:56:07.000+00:00
+        upstream_acr: upstream_acr
         method: password
         provider: provider
         organization: organization
         aal: aal0
+        upstream_amr:
+        - upstream_amr
+        - upstream_amr
       properties:
         aal:
           $ref: '#/components/schemas/authenticatorAssuranceLevel'
@@ -22479,6 +22597,7 @@ components:
             passkey CredentialsTypePasskey
             profile CredentialsTypeProfile
             saml CredentialsTypeSAML
+            deviceauthn CredentialsTypeDeviceAuthn
             link_recovery CredentialsTypeRecoveryLink  CredentialsTypeRecoveryLink is a special credential type linked to the link strategy (recovery flow).  It is not used within the credentials object itself.
             code_recovery CredentialsTypeRecoveryCode
           enum:
@@ -22491,6 +22610,7 @@ components:
           - passkey
           - profile
           - saml
+          - deviceauthn
           - link_recovery
           - code_recovery
           type: string
@@ -22504,6 +22624,7 @@ components:
             passkey CredentialsTypePasskey
             profile CredentialsTypeProfile
             saml CredentialsTypeSAML
+            deviceauthn CredentialsTypeDeviceAuthn
             link_recovery CredentialsTypeRecoveryLink  CredentialsTypeRecoveryLink is a special credential type linked to the link strategy (recovery flow).  It is not used within the credentials object itself.
             code_recovery CredentialsTypeRecoveryCode
         organization:
@@ -22512,6 +22633,20 @@ components:
         provider:
           description: OIDC or SAML provider id used for authentication
           type: string
+        upstream_acr:
+          description: |-
+            UpstreamACR is the `acr` claim reported by the upstream OIDC
+            provider, if any. Populated only for OIDC login methods when the
+            upstream ID token contained an `acr` claim.
+          type: string
+        upstream_amr:
+          description: |-
+            UpstreamAMR is the `amr` claim reported by the upstream OIDC
+            provider, if any. Populated only for OIDC login methods when the
+            upstream ID token contained an `amr` claim.
+          items:
+            type: string
+          type: array
       title: AuthenticationMethod identifies an authentication method
       type: object
     sessionAuthenticationMethods:
@@ -23058,15 +23193,23 @@ components:
             user_agent: user_agent
           authentication_methods:
           - completed_at: 2000-01-23T04:56:07.000+00:00
+            upstream_acr: upstream_acr
             method: password
             provider: provider
             organization: organization
             aal: aal0
+            upstream_amr:
+            - upstream_amr
+            - upstream_amr
           - completed_at: 2000-01-23T04:56:07.000+00:00
+            upstream_acr: upstream_acr
             method: password
             provider: provider
             organization: organization
             aal: aal0
+            upstream_amr:
+            - upstream_amr
+            - upstream_amr
           authenticator_assurance_level: null
           identity:
             traits: ""
@@ -23233,15 +23376,23 @@ components:
             user_agent: user_agent
           authentication_methods:
           - completed_at: 2000-01-23T04:56:07.000+00:00
+            upstream_acr: upstream_acr
             method: password
             provider: provider
             organization: organization
             aal: aal0
+            upstream_amr:
+            - upstream_amr
+            - upstream_amr
           - completed_at: 2000-01-23T04:56:07.000+00:00
+            upstream_acr: upstream_acr
             method: password
             provider: provider
             organization: organization
             aal: aal0
+            upstream_amr:
+            - upstream_amr
+            - upstream_amr
           authenticator_assurance_level: null
           identity:
             traits: ""
@@ -23797,6 +23948,7 @@ components:
             identifier_first IdentifierFirstGroup
             captcha CaptchaGroup
             saml SAMLGroup
+            deviceauthn DeviceAuthnGroup
           enum:
           - default
           - password
@@ -23811,6 +23963,7 @@ components:
           - identifier_first
           - captcha
           - saml
+          - deviceauthn
           - oauth2_consent
           type: string
           x-go-enum-desc: |-
@@ -23827,6 +23980,7 @@ components:
             identifier_first IdentifierFirstGroup
             captcha CaptchaGroup
             saml SAMLGroup
+            deviceauthn DeviceAuthnGroup
         messages:
           items:
             $ref: '#/components/schemas/uiText'
