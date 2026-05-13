@@ -49,7 +49,7 @@ import sh.ory.JSON;
 /**
  * Indicates that a session was issued, and the application should use this token for authenticated requests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-11T10:39:27.856018020Z[Etc/UTC]", comments = "Generator version: 7.7.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-13T10:12:49.059638454Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class ContinueWithSetOrySessionToken {
   /**
    * Action will always be &#x60;set_ory_session_token&#x60; set_ory_session_token ContinueWithActionSetOrySessionTokenString

@@ -51,7 +51,7 @@ import sh.ory.JSON;
 /**
  * SCIMClient represents a SCIM client configuration to be used by an external identity provider.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-11T10:39:27.856018020Z[Etc/UTC]", comments = "Generator version: 7.7.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-13T10:12:49.059638454Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class NormalizedProjectRevisionScimClient {
   public static final String SERIALIZED_NAME_AUTHORIZATION_HEADER_SECRET = "authorization_header_secret";
   @SerializedName(SERIALIZED_NAME_AUTHORIZATION_HEADER_SECRET)

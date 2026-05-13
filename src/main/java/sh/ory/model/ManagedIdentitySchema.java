@@ -50,7 +50,7 @@ import sh.ory.JSON;
 /**
  * Together the name and identity uuid are a unique index constraint. This prevents a user from having schemas with the same name. This also allows schemas to have the same name across the system.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-11T10:39:27.856018020Z[Etc/UTC]", comments = "Generator version: 7.7.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-13T10:12:49.059638454Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class ManagedIdentitySchema {
   public static final String SERIALIZED_NAME_BLOB_NAME = "blob_name";
   @SerializedName(SERIALIZED_NAME_BLOB_NAME)

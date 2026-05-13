@@ -51,7 +51,7 @@ import sh.ory.JSON;
 /**
  * Used to verify an out-of-band communication channel such as an email address or a phone number.  For more information head over to: https://www.ory.com/docs/kratos/self-service/flows/verify-email-account-activation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-11T10:39:27.856018020Z[Etc/UTC]", comments = "Generator version: 7.7.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-13T10:12:49.059638454Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class VerificationFlow {
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)

@@ -52,7 +52,7 @@ import sh.ory.JSON;
 /**
  * Schema: https://source.android.com/docs/security/features/keystore/attestation#schema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-11T10:39:27.856018020Z[Etc/UTC]", comments = "Generator version: 7.7.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-13T10:12:49.059638454Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class DeviceAuthnAndroidAuthorizationList {
   public static final String SERIALIZED_NAME_ACTIVE_DATE_TIME = "active_date_time";
   @SerializedName(SERIALIZED_NAME_ACTIVE_DATE_TIME)

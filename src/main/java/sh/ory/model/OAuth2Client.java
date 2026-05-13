@@ -54,7 +54,7 @@ import sh.ory.JSON;
 /**
  * OAuth 2.0 Clients are used to perform OAuth 2.0 and OpenID Connect flows. Usually, OAuth 2.0 clients are generated for applications which want to consume your OAuth 2.0 or OpenID Connect capabilities.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-11T10:39:27.856018020Z[Etc/UTC]", comments = "Generator version: 7.7.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-13T10:12:49.059638454Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class OAuth2Client {
   public static final String SERIALIZED_NAME_ACCESS_TOKEN_STRATEGY = "access_token_strategy";
   @SerializedName(SERIALIZED_NAME_ACCESS_TOKEN_STRATEGY)

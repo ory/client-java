@@ -49,7 +49,7 @@ import sh.ory.JSON;
 /**
  * Represents a single selectable value for an input whose JSON schema defined an &#x60;enum&#x60;. The value is always a scalar JSON type (string, number, or boolean) serialized verbatim from the schema. When present, clients should render the parent input as a select/dropdown.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-11T10:39:27.856018020Z[Etc/UTC]", comments = "Generator version: 7.7.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-13T10:12:49.059638454Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class UiNodeInputAttributesOption {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)

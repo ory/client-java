@@ -49,7 +49,7 @@ import sh.ory.JSON;
 /**
  * Response body for the bulk session management endpoint. Reports how many rows the call processed and, for the wildcard variant, whether the network still has matching rows left. Explicit-IDs requests always return &#x60;more: false&#x60;. Wildcard callers drain the network by re-issuing the same request while &#x60;more&#x60; is &#x60;true&#x60;.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-11T10:39:27.856018020Z[Etc/UTC]", comments = "Generator version: 7.7.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-13T10:12:49.059638454Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class ManageSessionsResponse {
   public static final String SERIALIZED_NAME_MORE = "more";
   @SerializedName(SERIALIZED_NAME_MORE)

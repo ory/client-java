@@ -51,7 +51,7 @@ import sh.ory.JSON;
 /**
  * Body for the bulk session management endpoint. Exactly one of &#x60;identities&#x60; or &#x60;sessions&#x60; must be provided. To operate on every session in the network, pass &#x60;identities: [\&quot;*\&quot;]&#x60; — the wildcard must appear alone, never mixed with explicit IDs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-11T10:39:27.856018020Z[Etc/UTC]", comments = "Generator version: 7.7.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-13T10:12:49.059638454Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class ManageSessionsBody {
   /**
    * Action to perform on the matching sessions. disable ManageSessionsActionDisable delete ManageSessionsActionDelete

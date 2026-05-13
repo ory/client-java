@@ -51,7 +51,7 @@ import sh.ory.JSON;
 /**
  * RecoveryIdentityAddress
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-11T10:39:27.856018020Z[Etc/UTC]", comments = "Generator version: 7.7.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-13T10:12:49.059638454Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class RecoveryIdentityAddress {
   public static final String SERIALIZED_NAME_BREAK_GLASS_FOR_ORGANIZATION = "break_glass_for_organization";
   @SerializedName(SERIALIZED_NAME_BREAK_GLASS_FOR_ORGANIZATION)

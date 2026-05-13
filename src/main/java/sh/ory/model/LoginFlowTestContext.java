@@ -50,7 +50,7 @@ import sh.ory.JSON;
 /**
  * Admin-test extension of a login flow. Populated only for flows created by the admin test endpoint; included in the flow&#39;s API response so the admin UI can render the pre-scoped provider and (once captured) the debug round-trip result.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-11T10:39:27.856018020Z[Etc/UTC]", comments = "Generator version: 7.7.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-13T10:12:49.059638454Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class LoginFlowTestContext {
   public static final String SERIALIZED_NAME_DEBUG_PAYLOAD = "debug_payload";
   @SerializedName(SERIALIZED_NAME_DEBUG_PAYLOAD)
